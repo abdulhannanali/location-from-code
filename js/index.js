@@ -142,7 +142,7 @@
 
 	// nominatim module
 	function Nominatim($, limit, format) {
-		var baseUrl = "http://nominatim.openstreetmap.org/search"
+		var baseUrl = "//nominatim.openstreetmap.org/search"
 		
 		var countryCodes = []
 		var format = format || "json"
