@@ -2,7 +2,7 @@
 
 Live demo here: https://abdulhannanali.github.io/location-from-code/
 
-Location from code is an interactive site which uses the [OpenStreetMap Nominatim API](http://wiki.openstreetmap.org/wiki/Nominatim) in order to get the geographical data from the location. It can also search for geographical data for specific countries. 
+Location from code is an interactive site which uses the [OpenStreetMap Nominatim API](http://wiki.openstreetmap.org/wiki/Nominatim) in order to get the geographical data using post code. It can also search for geographical data using post code for specific countries. 
 
 ### Libraries, Frameworks and APIs used
 The site couldn't have been possible without the following Libraries, Frameworks and APIs
