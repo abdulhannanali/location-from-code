@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get location from the post code</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/Materialize/dist/css/materialize.min.css">
+    <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h3 class="cyan-text accent-4-text">Search locations by post code</h3>
+			<p class="green-text">MR.WORLDWIDE :)</p>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<div class="card brown lighten-5">
+					<div class="card-content">
+						<h5>Find address by post code</h5>
+						<div class="row">
+							<div class="input-field">
+								<nav class="indigo lighten-4">
+								  <div class="nav-wrapper">
+								      <form>
+								        <div class="input-field">
+								          <input class="black-text" id="postCodeInput" type="search" required>
+								          <i class="material-icons">close</i>
+								        </div>
+								      </form>
+								  </div>
+							  	</nav>
+							</div>
+						</div>
+						<div class="row">
+							<div class="right">
+								<a class="btn-floating green tooltipped" data-tooltip="Enter a post code such as 1231. Make sure right countries or no countries are selected too" data-position="bottom" data-delay="50"><i class="material-icons">info	</i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="col s8">
+				<div class="card green lighten-4">
+					<div class="card-content">
+						<span class="card-title">Maybe just tell us and leave other things on us</span>
+						<div class="input-field">
+							<input id="queryField" type="text">
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="col s12">
+				<div class="card cyan accent-1">
+					<div class="card-content">
+						<span class="card-title">Add specific countries! No country is okay too! We'll figure it out!</span>
+						<div class="row">
+							<div class="col s10">
+								<div class="input-field">
+									<select id="countrySelect">
+									</select>
+								</div>
+							</div>
+							<div class="col s2 center">
+								<a id="countryAddBtn" class="btn-floating btn-large lime black-text waves-effect waves-green"><i class="material-icons">add</i></a>
+							</div>
+						</div>
+						<div class="row countryChips"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<div class="row">
+			<div class="SubmitBtn center">
+				<div class="card-panel light-green accent-1">
+					<a id="submitBtn" class="purple lighten-4 black-text waves-effect waves-green btn-large">Find!</a>			
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="row center animated flipInX" id="locationLoading">
+				<div class="preloader-wrapper big active">
+				    <div class="spinner-layer spinner-blue-only">
+				      <div class="circle-clipper left">
+				        <div class="circle"></div>
+				      </div><div class="gap-patch">
+				        <div class="circle"></div>
+				      </div><div class="circle-clipper right">
+				        <div class="circle"></div>
+				      </div>
+				    </div>
+				</div>
+			</div>
+			<div class="row">
+				<ul id="locationData" class="collection"></ul>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- javascript files -->
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="bower_components/Materialize/dist/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		// mainly materialize and other initializations
+		$(document).ready(function () {
+			// material select initialization
+			$("select").material_select()
+			$(".tooltipped").tooltip({delay: 50})
+		})
+
+	</script>
+</body>
+</html>
